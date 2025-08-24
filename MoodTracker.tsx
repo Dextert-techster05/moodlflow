@@ -49,7 +49,7 @@ const MoodTracker = () => {
   };
 
   const handleMoodSubmit = (mood: MoodType, note?: string) => {
-    const entry = addMoodEntry(mood, note);
+    addMoodEntry(mood, note);
     
     // Show celebration effect
     setShowCelebration(true);

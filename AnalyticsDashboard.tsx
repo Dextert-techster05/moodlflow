@@ -24,7 +24,7 @@ const AnalyticsDashboard = ({ stats, isLoading }: AnalyticsDashboardProps) => {
     if (!ctx) return;
 
     const total = Object.values(stats.moodDistribution).reduce((a, b) => a + b, 0);
-    const percentages = Object.entries(stats.moodDistribution).map(([mood, count]) => 
+    const percentages = Object.entries(stats.moodDistribution).map(([, count]) => 
       total > 0 ? Math.round((count / total) * 100) : 0
     );
 
@@ -173,7 +173,7 @@ const AnalyticsDashboard = ({ stats, isLoading }: AnalyticsDashboardProps) => {
   const updateChartData = useCallback(() => {
     if (doughnutChart.current) {
       const total = Object.values(stats.moodDistribution).reduce((a, b) => a + b, 0);
-      const percentages = Object.entries(stats.moodDistribution).map(([mood, count]) => 
+      const percentages = Object.entries(stats.moodDistribution).map(([, count]) => 
         total > 0 ? Math.round((count / total) * 100) : 0
       );
       

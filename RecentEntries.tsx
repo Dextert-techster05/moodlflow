@@ -9,16 +9,7 @@ interface RecentEntriesProps {
 const RecentEntries = ({ entries, isLoading }: RecentEntriesProps) => {
   const [expandedEntry, setExpandedEntry] = useState<string | null>(null);
 
-  const getMoodColor = (mood: string) => {
-    switch (mood) {
-      case 'happy': return 'text-orange-500 bg-orange-50 border-orange-200';
-      case 'sad': return 'text-blue-500 bg-blue-50 border-blue-200';
-      case 'angry': return 'text-red-500 bg-red-50 border-red-200';
-      case 'calm': return 'text-green-500 bg-green-50 border-green-200';
-      case 'excited': return 'text-purple-500 bg-purple-50 border-purple-200';
-      default: return 'text-gray-500 bg-gray-50 border-gray-200';
-    }
-  };
+
 
   const getMoodEmoji = (mood: string) => {
     switch (mood) {

@@ -11,7 +11,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "backend": "node backend/server.js",
     "backend:dev": "nodemon backend/server.js",
-    "start": "node backend/server.js"
+    "start": "node backend/server.js",
+    "vercel-build": "npm run build"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
